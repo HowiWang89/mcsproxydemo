@@ -40,7 +40,7 @@ public class DemoBizScan {
         sendRequest(request);
     }
 
-    static void sendRequest(CommonRequest request) {
+    private static void sendRequest(CommonRequest request) {
         HttpClient client = new DefaultHttpClient();
         HttpPost httpPost = new HttpPost(uri);
         // 将request对象转换为json字符串，并放入entity中
@@ -49,7 +49,7 @@ public class DemoBizScan {
         httpPost.setEntity(entity);
         httpPost.setHeader("Content-Type", "application/json;charset=utf8");
         // 响应模型
-        HttpResponse response = null;
+        HttpResponse response;
         try {
             // 由客户端执行(发送)Post请求
             response = client.execute(httpPost);
