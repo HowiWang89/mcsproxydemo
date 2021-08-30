@@ -7,4 +7,8 @@ public class Main {
         System.out.println("难搞哦");
     }
 
+    public static int hao(){
+        return 1;
+    }
+
 }
